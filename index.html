@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新手村 Skill 共创库</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; padding: 60px 20px; }
+        header h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+        header .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0b0;
+            margin-bottom: 8px;
+        }
+        header .slogan {
+            font-size: 1rem;
+            color: #e94560;
+            font-style: italic;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 20px 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .stat-item .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e94560;
+        }
+        .stat-item .label { color: #a0a0b0; font-size: 0.9rem; }
+        .search-box {
+            max-width: 600px;
+            margin: 40px auto;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 16px 24px;
+            font-size: 1rem;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-box input:focus { border-color: #e94560; }
+        .search-box input::placeholder { color: #666; }
+        .categories { margin: 40px 0; }
+        .category-title {
+            font-size: 1.5rem;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .category-title .badge {
+            background: #e94560;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .skill-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .skill-card:hover {
+            border-color: #e94560;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.1);
+        }
+        .skill-card .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .skill-card h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .skill-card .skill-id {
+            font-size: 0.75rem;
+            color: #666;
+            font-family: monospace;
+        }
+        .skill-card .difficulty {
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .difficulty-beginner { background: rgba(76, 175, 80, 0.2); color: #4caf50; }
+        .difficulty-intermediate { background: rgba(255, 152, 0, 0.2); color: #ff9800; }
+        .difficulty-advanced { background: rgba(244, 67, 54, 0.2); color: #f44336; }
+        .skill-card .description {
+            color: #a0a0b0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .skill-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .skill-card .tag {
+            background: rgba(255,255,255,0.08);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            color: #888;
+        }
+        .skill-card .actions {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+        }
+        .skill-card .actions button {
+            flex: 1;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .skill-card .actions button:hover {
+            background: #e94560;
+            border-color: #e94560;
+        }
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #666;
+        }
+        footer a { color: #e94560; text-decoration: none; }
+        .hidden { display: none !important; }
+        .prompt-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .prompt-modal.active { display: flex; }
+        .prompt-content {
+            background: #1a1a2e;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 24px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .prompt-content h3 { margin-bottom: 12px; }
+        .prompt-content pre {
+            background: rgba(0,0,0,0.3);
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .prompt-content .close-btn {
+            margin-top: 16px;
+            padding: 10px 24px;
+            background: #e94560;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>新手村 Skill 共创库</h1>
+            <p class="subtitle">新手村次元 (NVD) 官方 Agent Skill 库</p>
+            <p class="slogan">"让成长像游戏一样有趣，让 Skill 像冒险一样精彩"</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="number" id="stat-total">9</div>
+                <div class="label">已审核 Skill</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="stat-categories">4</div>
+                <div class="label">分类</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="stat-authors">1</div>
+                <div class="label">贡献团队</div>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="搜索 Skill，例如：破冰、分享会、户外、桌游、推文、社群..." oninput="filterSkills()">
+        </div>
+
+        <div id="skills-container"></div>
+
+        <footer>
+            <p>新手村次元 (Newbie Village Dimension) &copy; 2026</p>
+            <p>
+                <a href="https://github.com/nvd-skill-library/xinshoucun-skill-library" target="_blank">GitHub 仓库</a> |
+                <a href="docs/external-skill-usage.md">使用与投稿手册</a>
+            </p>
+            <p style="margin-top: 10px; font-style: italic;">人生不是既定剧本，而是主动开启的冒险旅程。</p>
+        </footer>
+    </div>
+
+    <div class="prompt-modal" id="prompt-modal" onclick="closeModal(event)">
+        <div class="prompt-content" onclick="event.stopPropagation()">
+            <h3 id="modal-title">安装提示词</h3>
+            <pre id="modal-text"></pre>
+            <button class="close-btn" onclick="document.getElementById('prompt-modal').classList.remove('active')">关闭</button>
+        </div>
+    </div>
+
+    <script>
+        const skillsData = {
+            "活动策划": [
+                {
+                    name: "新手村破冰活动策划",
+                    id: "xinshoucun-event-icebreaker",
+                    difficulty: "intermediate",
+                    description: "专为新手村设计的破冰活动策划Skill，覆盖主题破冰行动、团队融合游戏、冒险者初次见面等环节。",
+                    tags: ["破冰", "团队建设", "新手引导", "融合活动", "社交游戏"],
+                    path: "skills/event-planning/xinshoucun-event-icebreaker"
+                },
+                {
+                    name: "新手村围炉交流会与分享会策划",
+                    id: "xinshoucun-event-salon",
+                    difficulty: "intermediate",
+                    description: "专为新手村设计的知识分享与深度交流活动策划Skill，覆盖围炉交流会、AI探索分享会、大讲堂、特训营等品牌系列活动。",
+                    tags: ["分享会", "沙龙", "交流会", "知识传播", "培训", "讲座"],
+                    path: "skills/event-planning/xinshoucun-event-salon"
+                },
+                {
+                    name: "新手村户外冒险活动策划",
+                    id: "xinshoucun-event-outdoor",
+                    difficulty: "advanced",
+                    description: "专为新手村设计的户外冒险活动策划Skill，覆盖真人鹅鸭杀、猫抓老鼠、撕名牌大战、校园奇遇等户外冒险活动。",
+                    tags: ["户外活动", "冒险游戏", "运动竞技", "团队协作", "真人游戏"],
+                    path: "skills/event-planning/xinshoucun-event-outdoor"
+                },
+                {
+                    name: "新手村桌游活动策划",
+                    id: "xinshoucun-event-boardgame",
+                    difficulty: "beginner",
+                    description: "专为新手村设计的桌游活动策划Skill，覆盖狼人杀、剧本杀等日常桌游活动的组织与运营。",
+                    tags: ["桌游", "狼人杀", "剧本杀", "逻辑推理", "社交游戏", "日常活动"],
+                    path: "skills/event-planning/xinshoucun-event-boardgame"
+                },
+                {
+                    name: "新手村节庆与主题活动策划",
+                    id: "xinshoucun-event-festival",
+                    difficulty: "advanced",
+                    description: "专为新手村设计的节庆与主题活动策划Skill，覆盖中秋活动、周年庆、跨年活动、生日派对、特产互换、社团文化节、科技与音乐共舞嘉年华等。",
+                    tags: ["节庆活动", "主题派对", "周年庆", "嘉年华", "文化活动"],
+                    path: "skills/event-planning/xinshoucun-event-festival"
+                },
+                {
+                    name: "新手村对外合作活动策划",
+                    id: "xinshoucun-event-coop",
+                    difficulty: "advanced",
+                    description: "专为新手村设计的对外合作活动策划Skill，覆盖与咖啡馆、酒吧、院校、企业团队、商业品牌等的合作活动策划。",
+                    tags: ["对外合作", "品牌联动", "跨界合作", "商务合作", "联合活动"],
+                    path: "skills/event-planning/xinshoucun-event-coop"
+                }
+            ],
+            "内容创作": [
+                {
+                    name: "新手村活动宣传推广内容创作",
+                    id: "xinshoucun-content-promotion",
+                    difficulty: "intermediate",
+                    description: "专为新手村设计的活动宣传推广内容创作Skill，用于生成活动预热推文、回顾推文、海报文案、朋友圈文案、社群运营话术等多渠道宣传内容。",
+                    tags: ["推文", "宣传", "文案", "海报", "朋友圈", "社群运营", "内容创作"],
+                    path: "skills/content-creation/xinshoucun-content-promotion"
+                }
+            ],
+            "社群运营": [
+                {
+                    name: "新手村社群运营管理",
+                    id: "xinshoucun-community-ops",
+                    difficulty: "intermediate",
+                    description: "专为新手村设计的社群运营管理Skill，用于管理冒险者社群、维护门派群、组织线上活动、处理社群日常事务。",
+                    tags: ["社群运营", "用户管理", "线上活动", "门派管理", "社群维护"],
+                    path: "skills/community-management/xinshoucun-community-ops"
+                }
+            ],
+            "知识管理": [
+                {
+                    name: "新手村知识库维护与管理",
+                    id: "xinshoucun-kb-maintain",
+                    difficulty: "intermediate",
+                    description: "专为新手村设计的知识库维护与管理Skill，用于规划、整理、更新新手村的知识库体系，包括文档分类、标签体系、检索优化、内容审核等。",
+                    tags: ["知识库", "文档管理", "信息整理", "知识沉淀", "内容分类"],
+                    path: "skills/knowledge-base/xinshoucun-kb-maintain"
+                }
+            ]
+        };
+
+        function renderSkills(filter = "") {
+            const container = document.getElementById('skills-container');
+            container.innerHTML = '';
+            
+            for (const [category, skills] of Object.entries(skillsData)) {
+                const filteredSkills = skills.filter(skill => 
+                    !filter || 
+                    skill.name.includes(filter) || 
+                    skill.description.includes(filter) || 
+                    skill.tags.some(tag => tag.includes(filter))
+                );
+                
+                if (filteredSkills.length === 0) continue;
+                
+                const section = document.createElement('div');
+                section.className = 'categories';
+                section.innerHTML = `
+                    <h2 class="category-title">${category} <span class="badge">${filteredSkills.length}</span></h2>
+                    <div class="skills-grid">
+                        ${filteredSkills.map(skill => `
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div>
+                                        <h3>${skill.name}</h3>
+                                        <div class="skill-id">${skill.id}</div>
+                                    </div>
+                                    <span class="difficulty difficulty-${skill.difficulty}">${skill.difficulty}</span>
+                                </div>
+                                <p class="description">${skill.description}</p>
+                                <div class="tags">
+                                    ${skill.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                                </div>
+                                <div class="actions">
+                                    <button onclick="showPrompt('${skill.id}', 'codex')">复制 Codex 提示词</button>
+                                    <button onclick="showPrompt('${skill.id}', 'claude')">复制 Claude Code 提示词</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(section);
+            }
+        }
+
+        function filterSkills() {
+            const input = document.getElementById('search-input');
+            renderSkills(input.value.trim());
+        }
+
+        function showPrompt(skillId, client) {
+            const modal = document.getElementById('prompt-modal');
+            const title = document.getElementById('modal-title');
+            const text = document.getElementById('modal-text');
+            
+            let prompt = '';
+            if (client === 'codex') {
+                prompt = `请安装并验证这个 Agent Skill：\n\n仓库：nvd-skill-library/xinshoucun-skill-library\n分支：main\n目录：skills/<分类目录>/${skillId}\n\n优先使用 Codex 内置的 skill-installer；如果不可用，再从 GitHub 下载。\n必须复制整个 Skill 目录及其所有子目录，不要只复制 SKILL.md。\n安装到 $CODEX_HOME/skills/${skillId}；未设置 CODEX_HOME 时使用\n~/.codex/skills/${skillId}。\n如果目标目录已存在，不要覆盖，先告诉我。\n安装完成后检查 SKILL.md，并提醒我重启 Codex。`;
+            } else {
+                prompt = `请从 GitHub 安装并验证这个 Agent Skill：\n\n仓库：nvd-skill-library/xinshoucun-skill-library\n分支：main\n目录：skills/<分类目录>/${skillId}\n目标目录：~/.claude/skills/${skillId}\n\n只下载该 Skill 的完整目录，不要为了安装一个 Skill 克隆整个仓库。\n必须保留 scripts、references、assets 等子目录，不能只复制 SKILL.md。\n如果目标目录已存在，不要覆盖，先告诉我。\n安装完成后检查 SKILL.md，并提醒我重新加载 Claude Code。`;
+            }
+            
+            title.textContent = client === 'codex' ? 'Codex 安装提示词' : 'Claude Code 安装提示词';
+            text.textContent = prompt;
+            modal.classList.add('active');
+        }
+
+        function closeModal(event) {
+            if (event.target.id === 'prompt-modal') {
+                event.target.classList.remove('active');
+            }
+        }
+
+        renderSkills();
+    </script>
+</body>
+</html>
