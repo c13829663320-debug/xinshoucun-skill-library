@@ -148,9 +148,15 @@
             color: #888;
         }
         .skill-card .actions {
-            margin-top: 16px;
+            margin-top: 12px;
             display: flex;
             gap: 10px;
+        }
+        .skill-card .skill-author {
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: #e94560;
+            font-weight: 500;
         }
         .skill-card .actions button {
             flex: 1;
@@ -272,6 +278,7 @@
                     name: "新手村破冰活动策划",
                     id: "xinshoucun-event-icebreaker",
                     difficulty: "intermediate",
+                    author: "小明",
                     description: "专为新手村设计的破冰活动策划Skill，覆盖主题破冰行动、团队融合游戏、冒险者初次见面等环节。",
                     tags: ["破冰", "团队建设", "新手引导", "融合活动", "社交游戏"],
                     path: "skills/event-planning/xinshoucun-event-icebreaker"
@@ -280,6 +287,7 @@
                     name: "新手村围炉交流会与分享会策划",
                     id: "xinshoucun-event-salon",
                     difficulty: "intermediate",
+                    author: "小明",
                     description: "专为新手村设计的知识分享与深度交流活动策划Skill，覆盖围炉交流会、AI探索分享会、大讲堂、特训营等品牌系列活动。",
                     tags: ["分享会", "沙龙", "交流会", "知识传播", "培训", "讲座"],
                     path: "skills/event-planning/xinshoucun-event-salon"
@@ -288,6 +296,7 @@
                     name: "新手村户外冒险活动策划",
                     id: "xinshoucun-event-outdoor",
                     difficulty: "advanced",
+                    author: "小明",
                     description: "专为新手村设计的户外冒险活动策划Skill，覆盖真人鹅鸭杀、猫抓老鼠、撕名牌大战、校园奇遇等户外冒险活动。",
                     tags: ["户外活动", "冒险游戏", "运动竞技", "团队协作", "真人游戏"],
                     path: "skills/event-planning/xinshoucun-event-outdoor"
@@ -296,6 +305,7 @@
                     name: "新手村桌游活动策划",
                     id: "xinshoucun-event-boardgame",
                     difficulty: "beginner",
+                    author: "小明",
                     description: "专为新手村设计的桌游活动策划Skill，覆盖狼人杀、剧本杀等日常桌游活动的组织与运营。",
                     tags: ["桌游", "狼人杀", "剧本杀", "逻辑推理", "社交游戏", "日常活动"],
                     path: "skills/event-planning/xinshoucun-event-boardgame"
@@ -304,6 +314,7 @@
                     name: "新手村节庆与主题活动策划",
                     id: "xinshoucun-event-festival",
                     difficulty: "advanced",
+                    author: "小明",
                     description: "专为新手村设计的节庆与主题活动策划Skill，覆盖中秋活动、周年庆、跨年活动、生日派对、特产互换、社团文化节、科技与音乐共舞嘉年华等。",
                     tags: ["节庆活动", "主题派对", "周年庆", "嘉年华", "文化活动"],
                     path: "skills/event-planning/xinshoucun-event-festival"
@@ -312,6 +323,7 @@
                     name: "新手村对外合作活动策划",
                     id: "xinshoucun-event-coop",
                     difficulty: "advanced",
+                    author: "小明",
                     description: "专为新手村设计的对外合作活动策划Skill，覆盖与咖啡馆、酒吧、院校、企业团队、商业品牌等的合作活动策划。",
                     tags: ["对外合作", "品牌联动", "跨界合作", "商务合作", "联合活动"],
                     path: "skills/event-planning/xinshoucun-event-coop"
@@ -322,6 +334,7 @@
                     name: "新手村活动宣传推广内容创作",
                     id: "xinshoucun-content-promotion",
                     difficulty: "intermediate",
+                    author: "小明",
                     description: "专为新手村设计的活动宣传推广内容创作Skill，用于生成活动预热推文、回顾推文、海报文案、朋友圈文案、社群运营话术等多渠道宣传内容。",
                     tags: ["推文", "宣传", "文案", "海报", "朋友圈", "社群运营", "内容创作"],
                     path: "skills/content-creation/xinshoucun-content-promotion"
@@ -332,6 +345,7 @@
                     name: "新手村社群运营管理",
                     id: "xinshoucun-community-ops",
                     difficulty: "intermediate",
+                    author: "小明",
                     description: "专为新手村设计的社群运营管理Skill，用于管理冒险者社群、维护门派群、组织线上活动、处理社群日常事务。",
                     tags: ["社群运营", "用户管理", "线上活动", "门派管理", "社群维护"],
                     path: "skills/community-management/xinshoucun-community-ops"
@@ -342,6 +356,7 @@
                     name: "新手村知识库维护与管理",
                     id: "xinshoucun-kb-maintain",
                     difficulty: "intermediate",
+                    author: "小明",
                     description: "专为新手村设计的知识库维护与管理Skill，用于规划、整理、更新新手村的知识库体系，包括文档分类、标签体系、检索优化、内容审核等。",
                     tags: ["知识库", "文档管理", "信息整理", "知识沉淀", "内容分类"],
                     path: "skills/knowledge-base/xinshoucun-kb-maintain"
@@ -381,6 +396,7 @@
                                 <div class="tags">
                                     ${skill.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                                 </div>
+                                <div class="skill-author">贡献人：${skill.author || '未知'}</div>
                                 <div class="actions">
                                     <button onclick="showPrompt('${skill.id}', 'codex')">复制 Codex 提示词</button>
                                     <button onclick="showPrompt('${skill.id}', 'claude')">复制 Claude Code 提示词</button>
