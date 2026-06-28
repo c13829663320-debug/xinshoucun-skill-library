@@ -19,8 +19,8 @@
 | 提交自己的 Skill | 打开外部 Agent 投稿表单，或让 Codex / Claude Code 只创建标准化 Issue。 |
 | 反馈内容问题 | 在仓库创建普通 Issue，说明 Skill 名称、问题和复现方式。 |
 
-Skill 展示页：[立即搜索 Skill](https://nvd-skill-library.github.io)
-外部投稿入口：[打开外部 Agent 投稿表单](https://github.com/nvd-skill-library/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml)
+Skill 展示页：[立即搜索 Skill](https://c13829663320-debug.github.io/xinshoucun-skill-library)
+外部投稿入口：[打开外部 Agent 投稿表单](https://github.com/c13829663320-debug/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml)
 
 ## 二、搜索 Skill
 
@@ -40,10 +40,10 @@ Skill 展示页：[立即搜索 Skill](https://nvd-skill-library.github.io)
 请帮我从新手村 Skill 共创库检索适合当前任务的 Agent Skill。
 
 索引地址：
-https://raw.githubusercontent.com/nvd-skill-library/xinshoucun-skill-library/main/index/skills.json
+https://raw.githubusercontent.com/c13829663320-debug/xinshoucun-skill-library/main/index/skills.json
 
 仓库：
-nvd-skill-library/xinshoucun-skill-library
+c13829663320-debug/xinshoucun-skill-library
 
 先读取索引，只考虑 status 为 reviewed、category 不是"库维护工具"，
 且 platforms 包含当前客户端的 Skill。
@@ -68,7 +68,7 @@ nvd-skill-library/xinshoucun-skill-library
 ```
 请安装并验证这个 Agent Skill：
 
-仓库：nvd-skill-library/xinshoucun-skill-library
+仓库：c13829663320-debug/xinshoucun-skill-library
 分支：main
 目录：skills/<分类目录>/<skill-name>
 
@@ -93,7 +93,7 @@ nvd-skill-library/xinshoucun-skill-library
 ```
 请从 GitHub 安装并验证这个 Agent Skill：
 
-仓库：nvd-skill-library/xinshoucun-skill-library
+仓库：c13829663320-debug/xinshoucun-skill-library
 分支：main
 目录：skills/<分类目录>/<skill-name>
 目标目录：~/.claude/skills/<skill-name>
@@ -142,13 +142,13 @@ nvd-skill-library/xinshoucun-skill-library
 19. 不确定的信息填写"需进一步核查"，不要编造。
 20. 提交后保留 Issue 链接，等待工作流和维护者反馈。
 
-投稿表单：[打开外部 Agent 投稿](https://github.com/nvd-skill-library/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml)
+投稿表单：[打开外部 Agent 投稿](https://github.com/c13829663320-debug/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml)
 
 ## 九、使用 Codex 投稿
 
 ```
 请审查并整理我提供的 Agent Skill，然后只通过 GitHub Issue 投稿到
-nvd-skill-library/xinshoucun-skill-library。
+c13829663320-debug/xinshoucun-skill-library。
 
 不要 fork、clone、push、创建分支或创建 Pull Request。
 先检查 gh auth status。将正文写入 issue-body.md，使用仓库要求的
@@ -167,7 +167,7 @@ nvd-skill-library/xinshoucun-skill-library。
 请把我接下来提供的 Agent Skill 整理成新手村 Skill 共创库的
 标准化 GitHub Issue。
 
-仓库是 nvd-skill-library/xinshoucun-skill-library。
+仓库是 c13829663320-debug/xinshoucun-skill-library。
 只允许创建 Issue，不要 fork、clone、push 或创建 Pull Request。
 先运行 gh auth status。然后生成 issue-body.md，必须使用三级标题并依次
 包含：Skill 标题、Skill 英文 ID、分类、作者 / 公开署名、原始提供者、
@@ -175,7 +175,7 @@ nvd-skill-library/xinshoucun-skill-library。
 Prompt 示例、注意事项、案例、公开状态、投稿方式。
 
 投稿方式固定写 external-claude-code，Issue 标题以 [Skill] 开头。
-最后运行 gh issue create --repo nvd-skill-library/xinshoucun-skill-library
+最后运行 gh issue create --repo c13829663320-debug/xinshoucun-skill-library
 --title "[Skill] <Skill 标题>" --body-file issue-body.md。
 不要执行其他 GitHub 写操作，成功后只输出 Issue URL。
 ```
@@ -204,8 +204,8 @@ Prompt 示例、注意事项、案例、公开状态、投稿方式。
 
 ## 十三、关键入口
 
-Skill 展示页：[https://nvd-skill-library.github.io](https://nvd-skill-library.github.io)
-仓库主页：[https://github.com/nvd-skill-library/xinshoucun-skill-library](https://github.com/nvd-skill-library/xinshoucun-skill-library)
-外部投稿表单：[https://github.com/nvd-skill-library/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml](https://github.com/nvd-skill-library/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml)
-Issue 入口：[https://github.com/nvd-skill-library/xinshoucun-skill-library/issues/new/choose](https://github.com/nvd-skill-library/xinshoucun-skill-library/issues/new/choose)
-机器可读索引：[https://raw.githubusercontent.com/nvd-skill-library/xinshoucun-skill-library/main/index/skills.json](https://raw.githubusercontent.com/nvd-skill-library/xinshoucun-skill-library/main/index/skills.json)
+Skill 展示页：[https://c13829663320-debug.github.io/xinshoucun-skill-library](https://c13829663320-debug.github.io/xinshoucun-skill-library)
+仓库主页：[https://github.com/c13829663320-debug/xinshoucun-skill-library](https://github.com/c13829663320-debug/xinshoucun-skill-library)
+外部投稿表单：[https://github.com/c13829663320-debug/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml](https://github.com/c13829663320-debug/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml)
+Issue 入口：[https://github.com/c13829663320-debug/xinshoucun-skill-library/issues/new/choose](https://github.com/c13829663320-debug/xinshoucun-skill-library/issues/new/choose)
+机器可读索引：[https://raw.githubusercontent.com/c13829663320-debug/xinshoucun-skill-library/main/index/skills.json](https://raw.githubusercontent.com/c13829663320-debug/xinshoucun-skill-library/main/index/skills.json)

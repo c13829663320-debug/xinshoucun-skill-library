@@ -44,17 +44,17 @@
 ## 快速开始
 
 - [外部使用与投稿手册](docs/external-skill-usage.md)
-- [Skill 展示页](https://nvd-skill-library.github.io)
+- [Skill 展示页](https://c13829663320-debug.github.io/xinshoucun-skill-library)
 
 ## 投稿
 
-- 网页投稿：[打开外部 Agent 投稿表单](https://github.com/nvd-skill-library/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml)
+- 网页投稿：[打开外部 Agent 投稿表单](https://github.com/c13829663320-debug/xinshoucun-skill-library/issues/new?template=external_agent_submission.yml)
 - 使用 Codex / Claude Code 投稿：详见[投稿手册](docs/external-skill-usage.md)
 
 ## 机器可读索引
 
 ```
-https://raw.githubusercontent.com/nvd-skill-library/xinshoucun-skill-library/main/index/skills.json
+https://raw.githubusercontent.com/c13829663320-debug/xinshoucun-skill-library/main/index/skills.json
 ```
 
 ## 许可证

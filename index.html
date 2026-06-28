@@ -250,7 +250,7 @@
         <footer>
             <p>新手村次元 (Newbie Village Dimension) &copy; 2026</p>
             <p>
-                <a href="https://github.com/nvd-skill-library/xinshoucun-skill-library" target="_blank">GitHub 仓库</a> |
+                <a href="https://github.com/c13829663320-debug/xinshoucun-skill-library" target="_blank">GitHub 仓库</a> |
                 <a href="docs/external-skill-usage.md">使用与投稿手册</a>
             </p>
             <p style="margin-top: 10px; font-style: italic;">人生不是既定剧本，而是主动开启的冒险旅程。</p>
@@ -405,9 +405,9 @@
             
             let prompt = '';
             if (client === 'codex') {
-                prompt = `请安装并验证这个 Agent Skill：\n\n仓库：nvd-skill-library/xinshoucun-skill-library\n分支：main\n目录：skills/<分类目录>/${skillId}\n\n优先使用 Codex 内置的 skill-installer；如果不可用，再从 GitHub 下载。\n必须复制整个 Skill 目录及其所有子目录，不要只复制 SKILL.md。\n安装到 $CODEX_HOME/skills/${skillId}；未设置 CODEX_HOME 时使用\n~/.codex/skills/${skillId}。\n如果目标目录已存在，不要覆盖，先告诉我。\n安装完成后检查 SKILL.md，并提醒我重启 Codex。`;
+                prompt = `请安装并验证这个 Agent Skill：\n\n仓库：c13829663320-debug/xinshoucun-skill-library\n分支：main\n目录：skills/<分类目录>/${skillId}\n\n优先使用 Codex 内置的 skill-installer；如果不可用，再从 GitHub 下载。\n必须复制整个 Skill 目录及其所有子目录，不要只复制 SKILL.md。\n安装到 $CODEX_HOME/skills/${skillId}；未设置 CODEX_HOME 时使用\n~/.codex/skills/${skillId}。\n如果目标目录已存在，不要覆盖，先告诉我。\n安装完成后检查 SKILL.md，并提醒我重启 Codex。`;
             } else {
-                prompt = `请从 GitHub 安装并验证这个 Agent Skill：\n\n仓库：nvd-skill-library/xinshoucun-skill-library\n分支：main\n目录：skills/<分类目录>/${skillId}\n目标目录：~/.claude/skills/${skillId}\n\n只下载该 Skill 的完整目录，不要为了安装一个 Skill 克隆整个仓库。\n必须保留 scripts、references、assets 等子目录，不能只复制 SKILL.md。\n如果目标目录已存在，不要覆盖，先告诉我。\n安装完成后检查 SKILL.md，并提醒我重新加载 Claude Code。`;
+                prompt = `请从 GitHub 安装并验证这个 Agent Skill：\n\n仓库：c13829663320-debug/xinshoucun-skill-library\n分支：main\n目录：skills/<分类目录>/${skillId}\n目标目录：~/.claude/skills/${skillId}\n\n只下载该 Skill 的完整目录，不要为了安装一个 Skill 克隆整个仓库。\n必须保留 scripts、references、assets 等子目录，不能只复制 SKILL.md。\n如果目标目录已存在，不要覆盖，先告诉我。\n安装完成后检查 SKILL.md，并提醒我重新加载 Claude Code。`;
             }
             
             title.textContent = client === 'codex' ? 'Codex 安装提示词' : 'Claude Code 安装提示词';
