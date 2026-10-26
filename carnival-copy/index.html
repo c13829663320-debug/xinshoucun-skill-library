@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>新手村奇遇嘉年华 · 宣传文案抽取</title>
+<meta name="theme-color" content="#08b2ee">
+<style>
+:root{--ink:#16274a;--navy:#0e2965;--sky:#3cbefa;--pink:#fd3768;--green:#19bb78;--gold:#ffde19;--outline:#15285d}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#3dbcff;color:var(--ink)}
+.world{min-height:100vh;padding:14px 10px 36px;background:linear-gradient(180deg,#13a7ef 0,#91e2ff 60%,#d8f7ff 100%)}
+.phone{max-width:570px;margin:0 auto;background:#fff;border:7px solid #11224a;border-radius:28px;box-shadow:0 15px 0 #264d85,0 25px 50px #092c6380;overflow:hidden}
+.hero{position:relative;background:#38bafa}
+.hero img{display:block;width:100%;height:auto;min-height:180px;object-fit:cover}
+.ribbon{background:#124ca8;color:#fff;text-align:center;font-size:12px;font-weight:850;padding:9px 6px;letter-spacing:.2px}
+.main{padding:13px 13px 22px;background:linear-gradient(180deg,#c5f6ff 0%,#fff 14%,#f5fdff 100%)}
+.section{margin:11px 0 7px;font-weight:900;font-size:17px;letter-spacing:.2px}
+.panel{padding:12px;background:white;border:3px solid #174d9b;box-shadow:4px 4px 0 #5ba5e7;border-radius:12px}
+.platforms{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.p{border:3px solid #a3b9dc;border-radius:12px;background:#f5fbff;color:#173360;padding:12px 7px;font-size:16px;font-weight:900;cursor:pointer}
+.p span{display:block;font-size:11px;font-weight:600;margin-top:4px}
+.p.active[data-platform=xhs]{background:#ffe6ee;border-color:#fb3b6c;box-shadow:3px 3px 0 #ff9fbc}
+.p.active[data-platform=moments]{background:#defded;border-color:#08b66d;box-shadow:3px 3px 0 #8ce0b8}
+.postergrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.poster{position:relative;min-height:202px;overflow:hidden;border:4px solid #fff;outline:2px solid #217ae0;border-radius:10px;box-shadow:2px 3px 0 #174d9b;display:flex;flex-direction:column;justify-content:space-between;padding:10px;text-align:center;background:linear-gradient(148deg,#27cafa,#4187db 42%,#95ebbc 100%);color:#fff;text-shadow:2px 2px 0 #122c7d}
+.poster:nth-child(2){background:linear-gradient(135deg,#1c83ff,#d749e8 65%,#ffe560)}
+.poster h3{margin:13px 0 0;font-size:24px;line-height:1.18;color:#fff34d;-webkit-text-stroke:.4px #162256}
+.poster p{margin:0;font-weight:800;font-size:13px}
+.poster small{background:#fff4b6;color:#17316e;text-shadow:none;padding:5px;border:2px solid #21408d;font-weight:800;border-radius:5px}
+.star{font-size:28px;text-shadow:3px 3px #e08712;display:block}
+.poster:after{content:"✦  🎮   ★   🎁";display:block;font-size:20px;letter-spacing:8px}
+.roll{margin-top:18px;width:100%;border:4px solid #14295b;border-radius:13px;padding:14px 4px;background:linear-gradient(180deg,#ffec49,#ffc00b);box-shadow:0 7px 0 #d37716,inset 0 3px #fff5b4;font-size:23px;font-weight:1000;color:#171b42;text-shadow:1px 1px #fff;cursor:pointer}
+.roll:disabled{opacity:.65}.resultTitle{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:21px}
+.resultTitle span{font-size:11px;color:#5c6f9a;font-weight:500}
+.result{padding:14px;background:#fff;border:3px solid #b4d9ff;border-radius:11px;min-height:142px;white-space:pre-wrap;line-height:1.65;font-size:14px;overflow-wrap:anywhere;user-select:text}
+.actions{display:grid;grid-template-columns:1fr 1.15fr;gap:9px;margin-top:12px}
+.action{padding:12px 8px;border:3px solid #1c468d;border-radius:10px;font-weight:900;font-size:15px;background:#e5f5ff;color:#163b86;cursor:pointer}
+.action.blue{color:#fff;background:#0879ed;border-color:#1647a0;box-shadow:0 4px 0 #174388}
+.action:disabled{opacity:.5;cursor:default}
+.hint{text-align:center;color:#49618b;font-size:12px;margin:16px 0 3px}
+.footer{text-align:center;font-size:11px;color:#647ea2;padding:8px 12px 0}
+@media(max-width:360px){.poster{min-height:173px}.poster h3{font-size:20px}.roll{font-size:19px}.platforms .p{font-size:14px}}
+</style></head>
+<body><div class="world"><div class="phone">
+<header class="hero"><img src="./assets/pixel-scene.svg" alt="新手村奇遇嘉年华，文案抽取，10月28日东莞职业技术学院田径场"></header>
+<div class="ribbon">🎮 1000条小红书 + 1000条朋友圈文案 · 自由复制</div>
+<main class="main">
+<div class="section">🎮 选择发布平台</div>
+<div class="panel platforms" role="group" aria-label="发布平台">
+<button class="p active" data-platform="moments" aria-pressed="true">🟢 微信朋友圈<span>简短自然 · 好友可见</span></button>
+<button class="p" data-platform="xhs" aria-pressed="false">🔴 小红书<span>标题正文 · 话题标签</span></button>
+</div>
+<div class="section">🖼️ 活动情报</div><div class="panel postergrid">
+<div class="poster"><span class="star">🌟</span><h3>新手村<br>奇遇嘉年华</h3><p>玩游戏 · 集印章<br>解锁抽奖机会</p><small>16:00—19:00 集章</small></div>
+<div class="poster"><span class="star">⚔️</span><h3>伙伴集结<br>冒险开启！</h3><p>社团互动 · 舞台展演<br>音乐与惊喜</p><small>19:00起 舞台与抽奖</small></div>
+</div>
+<button id="draw" class="roll" disabled>🎲 正在加载1000条文案…</button>
+<div class="section resultTitle"><strong>📄 抽取结果 ✨</strong><span id="serial">尚未抽取</span></div>
+<div id="result" class="result" aria-live="polite">选择平台后点击黄色按钮，领取一条活动宣传文案。</div>
+<div class="actions"><button id="again" class="action" disabled>🔄 重新抽取</button><button id="copy" class="action blue" disabled>📋 一键复制文案</button></div>
+<div class="hint" id="notice">每个设备会记录已抽过的编号 · 不代表跨设备全局唯一</div>
+<div class="footer">活动信息以主办方现场公布为准 · 请按真实情况修改后自愿发布</div>
+</main></div></div>
+<script>
+let bank=null,platform='moments',current='',currentId=-1;
+const $=id=>document.getElementById(id),draw=$('draw'),again=$('again'),copy=$('copy'),notice=$('notice');
+const KEY='nvd-carnival-used-v2-';const API_BASE=''; // 接入共享领取服务后填写 URL
+function readUsed(){try{return JSON.parse(localStorage.getItem(KEY+platform)||'[]')}catch{return []}}
+function randomId(){let used=readUsed().filter(x=>Number.isInteger(x)&&x>=0&&x<1000);let set=new Set(used);let available=[];for(let i=0;i<1000;i++)if(!set.has(i))available.push(i);if(!available.length)throw Error('本设备该平台1000条文案已抽完');let arr=new Uint32Array(1);crypto.getRandomValues(arr);let id=available[arr[0]%available.length];localStorage.setItem(KEY+platform,JSON.stringify([...set,id]));return id}
+async function nextId(){if(!API_BASE)return randomId();let r=await fetch(API_BASE+'/claim?platform='+encodeURIComponent(platform),{method:'POST'});if(r.status===409)throw Error('该平台1000条文案已领完');if(!r.ok)throw Error('领取服务暂不可用');let d=await r.json();if(!Number.isInteger(d.id)||d.id<0||d.id>=1000)throw Error('文案编号错误');return d.id}
+async function pick(){if(!bank)return;draw.disabled=again.disabled=true;notice.textContent='正在挑选文案…';try{let id=await nextId();currentId=id;current=bank[id][platform];$('result').textContent=current;$('serial').textContent=(platform==='xhs'?'小红书':'朋友圈')+' · 第'+(id+1)+'号';copy.disabled=false;again.disabled=false;notice.textContent='已抽取成功，不满意可以再抽；点击复制后自行发布。';}catch(e){notice.textContent=e.message}finally{draw.disabled=false}}
+document.querySelectorAll('.p').forEach(el=>el.addEventListener('click',()=>{platform=el.dataset.platform;document.querySelectorAll('.p').forEach(b=>{let a=b===el;b.classList.toggle('active',a);b.setAttribute('aria-pressed',String(a))});current='';currentId=-1;$('result').textContent='已切换平台，点击黄色按钮领取文案。';$('serial').textContent='尚未抽取';copy.disabled=true;again.disabled=true;notice.textContent='每个设备会记录已抽过的编号 · 不代表跨设备全局唯一'}));
+draw.onclick=pick;again.onclick=pick;
+copy.onclick=async()=>{if(!current)return;try{await navigator.clipboard.writeText(current);notice.textContent='✅ 复制成功！可以粘贴到对应平台。'}catch{let t=document.createElement('textarea');t.value=current;document.body.appendChild(t);t.select();let ok=document.execCommand('copy');t.remove();notice.textContent=ok?'✅ 复制成功！':'复制失败，请长按文案手动复制。'}};
+fetch('./texts.json').then(r=>{if(!r.ok)throw Error('无法加载文案');return r.json()}).then(data=>{if(!Array.isArray(data)||data.length!==1000)throw Error('文案库数量应为1000组');for(const type of ['xhs','moments']){let a=data.map(x=>x[type]);if(a.some(x=>typeof x!=='string'||!x.trim())||new Set(a).size!==1000)throw Error(type+'文案重复或缺失')}bank=data;draw.disabled=false;draw.textContent='🎲 立即抽取文案';}).catch(e=>{draw.textContent='加载失败';notice.textContent=e.message});
+</script></body></html>
