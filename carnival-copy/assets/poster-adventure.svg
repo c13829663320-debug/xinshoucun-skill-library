@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="625" viewBox="0 0 460 625">
+ <defs>
+ <linearGradient id="g" x2="0.6" y2="1"><stop stop-color="#33c9ff"/><stop offset=".62" stop-color="#42a5fe"/><stop offset="1" stop-color="#60db9e"/></linearGradient>
+ </defs>
+ <rect width="460" height="625" rx="18" fill="url(#g)"/>
+ <g fill="#fff" shape-rendering="crispEdges"><path d="M4 91h55V70h22V48h69v22h34v21h46v15H4zM273 114h46V91h23V66h66v25h27v26h22v13H273z"/></g>
+ <g shape-rendering="crispEdges"><rect x="0" y="525" width="460" height="100" fill="#2bca91"/><rect x="0" y="568" width="460" height="57" fill="#2d7dae"/>
+ <rect x="0" y="565" width="100" height="58" fill="#72da68"/><rect x="320" y="566" width="140" height="57" fill="#60c56a"/>
+ <rect x="130" y="282" width="210" height="58" fill="#20539b"/><rect x="152" y="251" width="172" height="60" fill="#9be7ff"/><rect x="183" y="225" width="107" height="39" fill="#2d7bbc"/><rect x="208" y="193" width="54" height="45" fill="#46c6fa"/><rect x="224" y="148" width="21" height="58" fill="#1d3675"/><rect x="246" y="150" width="50" height="32" fill="#ff5f8f"/></g>
+ <g text-anchor="middle" font-family="Arial,'Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-weight="1000" paint-order="stroke">
+ <text x="230" y="76" font-size="42" fill="#ffffff" stroke="#123269" stroke-width="13">新手村</text>
+ <text x="230" y="155" font-size="66" fill="#ffe52d" stroke="#16346f" stroke-width="14">奇遇嘉年华</text>
+ </g>
+ <g stroke="#e97e22" fill="#ffec4b" stroke-width="6"><circle cx="70" cy="216" r="22"/><circle cx="393" cy="252" r="22"/></g>
+ 
+<g transform="translate(65 335) scale(1.05 1.05)" shape-rendering="crispEdges">
+<rect x="5" y="72" width="47" height="36" fill="#154582" stroke="#15275a" stroke-width="5"/>
+<rect x="8" y="105" width="18" height="40" fill="#243b80" stroke="#16275d" stroke-width="5"/>
+<rect x="33" y="105" width="18" height="40" fill="#243b80" stroke="#16275d" stroke-width="5"/>
+<rect x="0" y="142" width="27" height="13" fill="#ffda43" stroke="#15285e" stroke-width="4"/>
+<rect x="33" y="142" width="29" height="13" fill="#ffda43" stroke="#15285e" stroke-width="4"/>
+<rect x="-9" y="78" width="15" height="45" fill="#ffd4af" stroke="#172d64" stroke-width="5"/>
+<rect x="53" y="78" width="15" height="38" fill="#ffd4af" stroke="#172d64" stroke-width="5"/>
+<rect x="-7" y="20" width="74" height="72" rx="13" fill="#ffd1a3" stroke="#182456" stroke-width="6"/>
+<rect x="-9" y="7" width="64" height="24" fill="#a73a1c" stroke="#182456" stroke-width="5"/>
+<rect x="3" y="-7" width="58" height="20" fill="#b94722" stroke="#182456" stroke-width="4"/>
+<rect x="9" y="50" width="10" height="11" fill="#152047"/><rect x="43" y="50" width="10" height="11" fill="#152047"/>
+<rect x="28" y="72" width="18" height="6" fill="#cc5c7c"/>
+<rect x="15" y="84" width="33" height="23" fill="#4dadf8"/>
+</g><g transform="translate(282 345) scale(-0.94 0.94)" shape-rendering="crispEdges">
+<rect x="5" y="72" width="47" height="36" fill="#154582" stroke="#15275a" stroke-width="5"/>
+<rect x="8" y="105" width="18" height="40" fill="#243b80" stroke="#16275d" stroke-width="5"/>
+<rect x="33" y="105" width="18" height="40" fill="#243b80" stroke="#16275d" stroke-width="5"/>
+<rect x="0" y="142" width="27" height="13" fill="#ffda43" stroke="#15285e" stroke-width="4"/>
+<rect x="33" y="142" width="29" height="13" fill="#ffda43" stroke="#15285e" stroke-width="4"/>
+<rect x="-9" y="78" width="15" height="45" fill="#ffd4af" stroke="#172d64" stroke-width="5"/>
+<rect x="53" y="78" width="15" height="38" fill="#ffd4af" stroke="#172d64" stroke-width="5"/>
+<rect x="-7" y="20" width="74" height="72" rx="13" fill="#ffd1a3" stroke="#182456" stroke-width="6"/>
+<rect x="-9" y="7" width="64" height="24" fill="#a73a1c" stroke="#182456" stroke-width="5"/>
+<rect x="3" y="-7" width="58" height="20" fill="#b94722" stroke="#182456" stroke-width="4"/>
+<rect x="9" y="50" width="10" height="11" fill="#152047"/><rect x="43" y="50" width="10" height="11" fill="#152047"/>
+<rect x="28" y="72" width="18" height="6" fill="#cc5c7c"/>
+<rect x="15" y="84" width="33" height="23" fill="#4dadf8"/>
+</g>
+<g shape-rendering="crispEdges" stroke="#293871" stroke-width="6">
+<rect x="161" y="485" width="132" height="69" rx="6" fill="#b96e1c"/><rect x="172" y="475" width="113" height="36" fill="#ffd63a"/>
+<path d="M210 475v79M260 475v79" stroke="#ffb900"/><rect x="209" y="493" width="46" height="30" fill="#ffe57b"/>
+</g>
+<text x="229" y="478" text-anchor="middle" font-size="66" font-weight="900" fill="#ffe84e" stroke="#20366b" stroke-width="9" paint-order="stroke">?</text>
+ <rect x="20" y="568" width="420" height="43" rx="7" fill="#fff0a5" stroke="#152d70" stroke-width="7"/>
+ <text x="230" y="595" font-family="Arial,'Microsoft YaHei',sans-serif" text-anchor="middle" font-size="25" font-weight="950" fill="#12336e">玩游戏 · 集印章 · 赢惊喜</text>
+ </svg>
