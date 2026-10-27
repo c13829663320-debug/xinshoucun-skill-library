@@ -78,7 +78,7 @@ button:active:not(:disabled){transform:translateY(3px)}
 /* Pixel carnival visual refresh. Original application script is unchanged. */
 :root{--deep:#091b49;--ink:#102453;--gold:#ffe04b}
 body{background:#16b0f1}
-.world{background-repeat:no-repeat;background-color:#16b0f1;padding:36px 20px 70px;background:linear-gradient(#079fec30,#0394dd20),url('./assets/carnival-world.png') center top/cover fixed no-repeat;}
+.world{background-repeat:no-repeat;background-color:#16b0f1;padding:36px 20px 70px;background:linear-gradient(#079fec30,#0394dd20),url('./assets/carnival-world.webp') center top/cover fixed no-repeat;}
 .phone{max-width:600px;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
 .statusbar{display:none}
 .cloud,.tree,.ground,.spark{display:none}
@@ -156,7 +156,7 @@ button:disabled{opacity:.6}
 
 /* Rich pixel cartoon: title artwork, layered arcade controls, game panels */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.world{background-color:#10a9ee;background-image:linear-gradient(#0088e514,#009df515),url('./assets/carnival-world.png')}
+.world{background-color:#10a9ee;background-image:linear-gradient(#0088e514,#009df515),url('./assets/carnival-world.webp')}
 .banner{padding:0 0 25px;min-height:0}
 .brand{font-size:20px;margin-bottom:0;gap:9px}.brandMark{width:34px;height:34px;font-size:27px;box-shadow:3px 3px #ffc72c}.brand small{font-size:6px;letter-spacing:1.2px}
 .banner h1.illustratedTitle{display:block;transform:none;margin:-14px -8% -24px;width:116%;font-size:0;line-height:0;white-space:normal;-webkit-text-stroke:0;text-shadow:none}
@@ -204,6 +204,8 @@ button:disabled{opacity:.6}
 .brand.uploadedLogo img{position:absolute;display:block;width:189.279113%;height:auto;max-width:none;left:-44.639556%;top:-99.022801%}
 @media(max-width:620px){.brand.uploadedLogo{width:200px;margin-bottom:5px}}
 </style>
+<link rel="preload" as="image" href="./assets/pixel-title.webp" fetchpriority="high">
+<link rel="preload" as="fetch" href="./texts.json" crossorigin>
 </head>
 <body><div class="world">
 <div class="cloud"></div><div class="cloud two"></div><div class="tree left"></div><div class="tree right"></div><div class="spark a">✦</div><div class="spark b">✦</div><div class="spark c">✦</div><div class="ground"></div>
@@ -211,8 +213,8 @@ button:disabled{opacity:.6}
 <div class="statusbar"><span>9:41</span><span class="notch"></span><span>▮▮▮ ◕ ▰</span></div>
 <header class="banner">
 <span class="floaty left" aria-hidden="true">✦</span><span class="floaty right" aria-hidden="true">🪙</span>
-<div class="brand uploadedLogo"><img src="./assets/newbie-village-logo.png" alt="新手村次元 NEWBIE VILLAGE DIMENSION" width="2048" height="914"></div>
-<h1 class="illustratedTitle"><img src="./assets/pixel-title.png" alt="活动宣传 文案抽取" width="1200" height="600"><span class="sr-only">活动宣传文案抽取</span></h1>
+<div class="brand uploadedLogo"><img src="./assets/newbie-village-logo.webp" decoding="async" alt="新手村次元 NEWBIE VILLAGE DIMENSION" width="2048" height="914"></div>
+<h1 class="illustratedTitle"><img src="./assets/pixel-title.webp" decoding="async" fetchpriority="high" alt="活动宣传 文案抽取" width="1200" height="600"><span class="sr-only">活动宣传文案抽取</span></h1>
 <div class="tagline">一键抽取活动文案，轻松分享到朋友圈或小红书！</div>
 </header>
 <main class="main">
