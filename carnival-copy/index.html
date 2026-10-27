@@ -74,17 +74,140 @@ button:active:not(:disabled){transform:translateY(3px)}
 @media(max-width:520px){.world{padding:0 0 30px}.phone{border:0;border-radius:0;box-shadow:none}.statusbar{display:none}.banner{padding-top:22px;min-height:237px}.main{margin:0 6px;padding:12px 10px 20px}.heading{font-size:16px}.heading .meta{font-size:9px}.channel{font-size:15px;padding:9px 3px}.channel .mini{width:39px;height:39px}.posterTop{font-size:15px}.tree,.spark,.cloud{display:none}}
 @media(max-width:350px){.banner h1{font-size:38px}.channel{font-size:12px}.channel .mini{width:34px;height:34px;font-size:21px}.channel[data-platform=xhs] .mini{font-size:10px}.actionBar{gap:5px}.act{font-size:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* V3 high-fidelity pixel RPG design system */
+.world{padding-top:15px;background:
+  radial-gradient(circle at 50% 15%,rgba(255,255,255,.22),transparent 44%),
+  url('./assets/pixel-sky.svg') center center/cover fixed no-repeat,
+  #20b9ff}
+.world:before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(circle at 8% 28%,#fff5 0 2px,transparent 3px),
+  radial-gradient(circle at 91% 43%,#fff7 0 3px,transparent 4px)}
+.phone{max-width:720px;border:12px solid #050b20;border-radius:82px 82px 35px 35px;box-shadow:
+  0 0 0 4px #45649a,0 0 0 7px #030918,0 24px 0 #0d3b6b55,0 38px 65px #052c6d7a}
+.statusbar{background:#08aaf2;padding-top:24px;padding-bottom:13px}
+.statusbar .notch{height:30px;width:138px;border-radius:0 0 20px 20px}
+.banner{padding:8px 11px 62px;min-height:305px;
+ background:linear-gradient(180deg,#0db0fa44,#4ed5ff1a),
+ url('./assets/pixel-sky.svg') 50% 42%/cover no-repeat}
+.banner:after{content:"";position:absolute;bottom:-3px;left:0;right:0;height:45px;
+ background:linear-gradient(0deg,#68d3ffbb,transparent)}
+.brand{position:relative;margin-top:4px;font-size:22px;z-index:3;text-shadow:3px 3px 0 #09235e}
+.brandMark{width:48px;height:48px;font-size:34px;box-shadow:5px 5px 0 #d88614}
+.brand small{font-size:8px}
+.banner h1{
+ position:relative;z-index:3;white-space:nowrap;
+ margin:19px auto 13px;
+ font-size:clamp(36px,7.2vw,72px);
+ letter-spacing:-2.5px;line-height:1.1;
+ -webkit-text-stroke:4px #0c255d;
+ text-shadow:4px 6px 0 #1d56aa,7px 9px 0 #081b52,0 0 3px #061e57;
+}
+.banner h1 .highlight{color:#ffe944;text-shadow:4px 6px #ba3c7a,7px 9px #081b52}
+.tagline{z-index:3;position:relative;margin-top:0;background:#fff19f;border:4px solid #142c70;
+ padding:8px 14px;box-shadow:5px 5px 0 #d88c20;border-radius:9px;
+ font-size:clamp(11px,2.3vw,17px);font-weight:1000;transform:rotate(-1deg)}
+.banner .floaty.left{top:100px;left:6%;font-size:45px}
+.banner .floaty.right{top:177px;right:5%;font-size:44px}
+.mascot{position:absolute;z-index:4;bottom:-3px;width:118px;height:155px;filter:drop-shadow(4px 4px 0 #0c3977)}
+.mascot.boy{left:0}.mascot.girl{right:0;transform:scaleX(-1)}
+.decor-coin{position:absolute;z-index:4;right:20%;bottom:10px;width:58px;filter:drop-shadow(3px 4px #1869a9)}
+.main{padding:9px 13px 27px;margin:0 9px 10px;background:#fff;border:5px solid #1b6ec0;
+ border-radius:12px;box-shadow:inset 0 0 0 4px #d2f3ff,0 5px 0 #116ac1}
+.block{position:relative;margin-bottom:11px}
+.heading{font-size:21px;font-weight:1000;color:#102b73;margin:0;padding:9px 7px 10px}
+.heading .icon{font-size:25px}
+.heading .meta{font-size:12px;color:#173463}
+.badgeInfo{display:none}
+.picks{background:#fff;padding:3px 8px 12px;gap:13px}
+.channel{min-height:88px;border:4px solid #c8d8ec;border-radius:15px;
+ font-size:20px;background:#f8fbff;box-shadow:inset 0 0 0 3px #fff;
+ padding:12px 16px;gap:14px;text-shadow:.2px .2px #0a2b6c}
+.channel .mini{width:70px;height:60px;border-radius:13px;font-size:33px}
+.channel[data-platform=xhs] .mini{font-size:17px}
+.channel.selected[data-platform=moments]{background:#e0fff3;border-color:#057e75;box-shadow:0 5px 0 #7ad8b7,inset 0 0 0 3px #fff}
+.channel.selected[data-platform=xhs]{background:#ffe8ee;border-color:#f03a69;box-shadow:0 5px 0 #fbb9cb,inset 0 0 0 3px #fff}
+.channel .tick{width:29px;height:29px;font-size:20px;line-height:24px}
+.posterPanel{padding:12px 10px;border:4px solid #168cf1;box-shadow:inset 0 0 0 5px #daf8ff;
+ border-radius:20px}
+.posterTop{width:66%;min-width:230px;border:4px solid #0a2466;padding:7px 2px;
+ background:linear-gradient(#fff58b,#ffd337);font-size:20px;box-shadow:4px 5px 0 #cf791e}
+.posters{gap:4px;padding:2px}
+.poster{border:4px solid #078ce5;background:#f9feff;box-shadow:0 4px 0 #80c5f2;border-radius:9px;padding:3px}
+.poster img{aspect-ratio:300/456;object-fit:cover}
+.poster.selected{outline:3px solid #2aabff;outline-offset:1px}
+.posterTip{margin:7px 0 0;font-size:12px}
+.draw{margin:21px auto 23px;
+ min-height:99px;border:6px solid #151d3f;border-radius:10px;
+ background:linear-gradient(180deg,#fff88f 0%,#ffe438 23%,#ffd114 67%,#ff9e1e 100%);
+ box-shadow:0 7px 0 #d76512,inset 0 5px #fff8b5,0 12px 0 #f5c88a;
+ font-size:clamp(30px,5.6vw,45px);color:#171624;
+ text-shadow:2px 3px #fff2b5;letter-spacing:1px}
+.draw:before,.draw:after{font-size:35px;color:#ff9316}
+.resultPanel{padding:14px 12px 15px;border:4px solid #2a89e0;box-shadow:inset 0 0 0 4px #e7f7ff;border-radius:14px}
+.resultCopy{font-size:17px;line-height:1.75;color:#132d66;min-height:200px;
+ max-height:330px;background:#fff;padding:14px 44px 14px 17px;border:3px solid #c7ddf5}
+.resultCopy:after{content:"▢";position:absolute;right:14px;top:10px;color:#1679bd;font-size:29px}
+.actionBar{grid-template-columns:1fr 1.23fr 1fr;gap:9px;margin-top:13px}
+.act{border-width:3px;border-radius:9px;min-height:64px;font-weight:1000;font-size:18px;
+ background:linear-gradient(180deg,#fff,#e9f6ff)}
+.act.primary{font-size:20px;border:4px solid #1155ab;
+ background:linear-gradient(180deg,#33c5ff,#0077e9);box-shadow:0 4px 0 #024bba}
+.notice{font-size:12px}.foot{font-size:11px}
+.coin-sticker{position:absolute;z-index:3;width:63px;pointer-events:none;filter:drop-shadow(4px 5px 0 #ad6417)}
+.coin-sticker.l{left:calc(50% - 470px);top:245px}
+.coin-sticker.r{right:calc(50% - 470px);top:750px}
+.chest-sticker{position:absolute;z-index:3;width:176px;right:calc(50% - 555px);bottom:37px;pointer-events:none;filter:drop-shadow(7px 8px #a05121)}
+.boy-sticker{position:absolute;z-index:3;width:135px;left:calc(50% - 555px);bottom:45px;pointer-events:none}
+.ground{background:linear-gradient(#69f583 0 15px,#829bd4 15px 38px,#5e70bb 38px);}
+@media(max-width:750px){
+ .phone{border:0;border-radius:0;box-shadow:none}
+ .world{padding:0 0 22px}
+ .statusbar{display:none}
+ .coin-sticker,.chest-sticker,.boy-sticker{display:none}
+ .banner{min-height:220px;padding:18px 4px 55px}
+ .banner h1{font-size:clamp(30px,7.7vw,52px);-webkit-text-stroke:3px #082567;
+   letter-spacing:-1.7px;margin:13px auto 9px}
+ .brand{font-size:17px}.brandMark{width:39px;height:39px;font-size:29px}
+ .tagline{font-size:clamp(9px,2.85vw,13px);padding:7px 9px}
+ .mascot{width:88px;height:116px;bottom:-4px}
+ .decor-coin{width:44px;right:21%;bottom:4px}
+ .main{margin:0 4px 6px;border-width:3px;padding:7px 8px 18px}
+ .heading{font-size:17px;padding:8px 2px}
+ .heading .icon{font-size:20px}
+ .heading .meta{font-size:10px}
+ .channel{min-height:73px;padding:8px 4px;font-size:clamp(12px,3.35vw,17px);gap:6px}
+ .channel .mini{width:47px;height:43px;font-size:25px}
+ .channel[data-platform=xhs] .mini{font-size:11px}
+ .picks{gap:8px;padding:2px 3px 9px}
+ .posterPanel{padding:8px 6px;border-width:3px}
+ .posterTop{width:82%;font-size:clamp(12px,3.6vw,17px);min-width:0}
+ .poster{border-width:2px;padding:2px}
+ .draw{min-height:75px;font-size:clamp(23px,6.3vw,32px);border-width:4px;margin:15px auto 16px}
+ .resultPanel{padding:9px;border-width:3px}
+ .resultCopy{min-height:160px;max-height:300px;font-size:14px;padding:12px 20px}
+ .actionBar{gap:5px}
+ .act{font-size:clamp(10px,3.1vw,14px);min-height:54px}
+ .act.primary{font-size:clamp(12px,3.5vw,16px)}
+}
+@media(max-width:360px){.mascot{width:72px}.decor-coin{display:none}.channel .mini{width:40px;font-size:20px}.heading .meta{max-width:46%;text-align:right}}
+
 </style>
 </head>
 <body><div class="world">
 <div class="cloud"></div><div class="cloud two"></div><div class="tree left"></div><div class="tree right"></div><div class="spark a">✦</div><div class="spark b">✦</div><div class="spark c">✦</div><div class="ground"></div>
+<img class="coin-sticker l" src="./assets/coin.svg" alt="" aria-hidden="true"/><img class="coin-sticker r" src="./assets/coin.svg" alt="" aria-hidden="true"/><img class="chest-sticker" src="./assets/chest.svg" alt="" aria-hidden="true"/><img class="boy-sticker" src="./assets/mascot-boy.svg" alt="" aria-hidden="true"/>
 <div class="phone">
 <div class="statusbar"><span>9:41</span><span class="notch"></span><span>▮▮▮ ◕ ▰</span></div>
 <header class="banner">
+<img class="mascot boy" src="./assets/mascot-boy.svg" alt="" aria-hidden="true"/>
+<img class="mascot girl" src="./assets/mascot-girl.svg" alt="" aria-hidden="true"/>
+<img class="decor-coin" src="./assets/coin.svg" alt="" aria-hidden="true"/>
 <span class="floaty left" aria-hidden="true">✦</span><span class="floaty right" aria-hidden="true">🪙</span>
 <div class="brand"><span class="brandMark" aria-hidden="true">N</span><span>新手村次元<small>NEWBIE VILLAGE DIMENSION</small></span></div>
-<h1>活动宣传<br><span class="highlight">文案</span>抽取</h1>
-<div class="tagline">一键抽取活动文案，轻松分享到朋友圈或小红书！</div>
+<h1>活动宣传<span class="highlight">文案</span>抽取</h1>
+<div class="tagline">一键抽取活动文案，轻松发布到朋友圈或小红书！</div>
 </header>
 <main class="main">
 <section class="block" id="platformSection"><div class="heading"><span><span class="icon">🎮</span> 选择发布平台</span><span class="badgeInfo">① 选择平台</span></div>
