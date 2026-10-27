@@ -75,152 +75,154 @@ button:active:not(:disabled){transform:translateY(3px)}
 @media(max-width:350px){.banner h1{font-size:38px}.channel{font-size:12px}.channel .mini{width:34px;height:34px;font-size:21px}.channel[data-platform=xhs] .mini{font-size:10px}.actionBar{gap:5px}.act{font-size:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+/* Pixel carnival visual refresh. Original application script is unchanged. */
+:root{--deep:#091b49;--ink:#102453;--gold:#ffe04b}
+body{background:#16b0f1}
+.world{background-repeat:no-repeat;background-color:#16b0f1;padding:36px 20px 70px;background:linear-gradient(#079fec30,#0394dd20),url('./assets/carnival-world.png') center top/cover fixed no-repeat;}
+.phone{max-width:600px;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+.statusbar{display:none}
+.cloud,.tree,.ground,.spark{display:none}
+.banner{min-height:255px;padding:8px 0 27px;background:none;overflow:visible}
+.brand{font-size:24px;margin-bottom:22px;gap:12px;filter:drop-shadow(0 3px #08234b)}
+.brandMark{width:47px;height:47px;font-size:39px;border-radius:0;box-shadow:4px 4px #ffc631}
+.brand small{font-size:8px;letter-spacing:1.6px;margin-top:2px}
+.banner h1{font-size:clamp(32px,7.7vw,57px);white-space:nowrap;letter-spacing:-1.5px;line-height:1.2;-webkit-text-stroke:6px #091b49;text-shadow:0 5px #1c4d9c,3px 9px #061b48,4px 12px #f34070;transform:rotate(-2deg)}
+.banner h1 br{display:none}
+.tagline{font-size:14px;margin-top:23px;padding:8px 16px;transform:none;box-shadow:0 4px #e7a127;border-radius:0;background:#fff6b0;border-width:3px}
+.banner .floaty.left{top:0;left:5px}.banner .floaty.right{top:10px;right:9px}
+.main{background:transparent;margin:0;padding:0;border:0;border-radius:0;box-shadow:none}
+.block,#resultSection{margin-bottom:18px;background:linear-gradient(135deg,#fff 40%,#edf8ff);border:3px solid #112652;border-radius:3px;box-shadow:0 4px 0 #071c48,0 0 0 4px #b9f0ff,0 0 0 6px #1666ad;padding:18px;position:relative}
+.block:before,#resultSection:before{content:'';position:absolute;inset:5px;pointer-events:none;border-top:2px solid white}
+.heading{font-size:21px;padding:0 0 16px;letter-spacing:.2px;gap:8px;line-height:1.3}
+.heading .icon{display:inline-grid;place-items:center;width:30px;height:30px;font-size:23px;vertical-align:middle;margin-right:3px}
+.heading .meta{font-size:11px;color:#496183;max-width:45%;font-weight:650}
+.badgeInfo{border-radius:3px;background:#eaf5ff;font-size:10px;padding:5px 7px;color:#356a99}
+.picks{gap:15px}
+.channel{min-height:83px;font-size:20px;border-radius:4px;gap:12px;border:3px solid #c4d8ed;box-shadow:0 3px #d7e6f4,inset 0 0 0 3px white;padding:12px 6px;transition:background .16s,box-shadow .16s}
+.channel .mini{width:52px;height:49px;border-radius:10px;background:linear-gradient(135deg,#20d991,#00b16b);text-shadow:none}
+.channel.selected[data-platform=moments]{border-color:#108c70;box-shadow:0 3px #15776d,inset 0 0 0 3px white;background:linear-gradient(120deg,#e0fff4,#c8f7e5)}
+.channel.selected[data-platform=xhs]{border-color:#e2335c;box-shadow:0 3px #ae244c,inset 0 0 0 3px white}
+.channel .tick{width:27px;height:27px;top:-11px;right:-8px}
+.wechatIcon{width:39px;height:35px}
+.posterPanel{padding:0;border:0;box-shadow:none;background:none;border-radius:0;margin-top:6px}
+.posterTop{position:relative;z-index:1;font-size:20px;border:3px solid #102453;border-radius:0;box-shadow:0 4px #d36a19;width:88%;padding:7px 3px;margin:0 auto -10px;background:linear-gradient(#fff8a5,#ffe453 45%,#ffbd37)}
+.posters{gap:10px;padding:20px 9px 9px;border:3px solid #00adf5;box-shadow:inset 0 0 0 3px #d2f9ff;border-radius:13px;background:white}
+.poster{padding:0;border:2px solid #c0edff;border-radius:5px;box-shadow:none}
+.poster img{aspect-ratio:460/625;border-radius:0}
+.poster.selected{outline:3px solid #078afa;outline-offset:0}
+.posterTip{font-size:11px;margin:13px 0 0;color:#5c7294}
+.draw{width:calc(100% - 16px);margin:26px auto 30px;border:4px solid #101d42;border-radius:2px;box-shadow:0 6px #f24547,0 10px #102453,inset 0 4px #fff9bb,inset 0 -4px #ff991e;background:linear-gradient(#fff575,#ffe42f 48%,#ffc231);padding:16px 5px;font-size:35px;line-height:1.3;text-shadow:2px 2px #fff6a0;letter-spacing:1px;transition:filter .15s}
+.draw:hover:not(:disabled){filter:brightness(1.06)}
+.draw:before,.draw:after{top:10px;font-size:25px;color:#ffbd19;text-shadow:1px 1px #9f4117}.draw:before{left:-20px}.draw:after{right:-20px}
+#resultSection{margin-bottom:0}
+.resultPanel{padding:0;border:0;box-shadow:none;background:none}
+.resultCopy{font-size:16px;line-height:1.85;min-height:145px;max-height:360px;border-radius:10px;background:linear-gradient(130deg,#f0f8ff,#e8f4ff);border:2px solid #d1e5fa;padding:16px;color:#162e61}
+.actionBar{margin-top:14px;gap:10px}
+.act{font-size:14px;padding:14px 2px;border-radius:3px;border:2px solid #136bb1;box-shadow:0 3px #97cee8;background:linear-gradient(white,#e7f6ff)}
+.act.primary{font-size:16px;background:linear-gradient(#22c5ff,#0098fb);border:3px solid #1655a9;box-shadow:0 3px #092e79,inset 0 0 0 2px #7bdbff}
+.notice{background:#e9f8ffec;border:2px solid #6fc3e3;border-radius:4px;padding:10px 14px;margin:18px 0 0;color:#235680;font-size:12px}
+.foot{color:#143c68;background:#e3f7ffde;margin:12px 0 0;padding:10px;font-size:11px;border-radius:4px}
+@media(min-width:900px){.world{padding-top:45px;background-size:cover}.banner{padding-top:10px}}
+@media(max-width:620px){.world{padding:22px 15px 35px;background-size:auto 1100px;background-attachment:scroll}.banner{min-height:210px;padding:2px 0 24px}.brand{font-size:21px;margin-bottom:18px}.brandMark{width:38px;height:38px;font-size:31px}.banner h1{font-size:clamp(29px,7.7vw,46px);-webkit-text-stroke:4px #091b49;letter-spacing:-1px;text-shadow:0 4px #1c4d9c,2px 7px #061b48,3px 9px #f34070}.tagline{font-size:clamp(10px,2.65vw,14px);padding:7px 8px;margin-top:20px}.block,#resultSection{padding:14px 12px;margin-bottom:15px}.heading{font-size:18px;padding-bottom:14px}.heading .icon{width:23px;font-size:21px}.heading .meta{font-size:9px}.picks{gap:10px}.channel{font-size:16px;gap:8px;min-height:72px;padding:10px 4px}.channel .mini{width:43px;height:43px}.posterTop{font-size:17px}.draw{font-size:28px;padding:14px 3px;margin:23px auto 27px}.resultCopy{font-size:14px;padding:12px;line-height:1.85}.act{font-size:12px;padding:13px 1px}.act.primary{font-size:14px}.actionBar{gap:7px}.badgeInfo{font-size:9px;padding:4px}.banner .floaty{font-size:24px}.banner .floaty.left{left:0}.banner .floaty.right{right:0}}
+@media(max-width:360px){.world{padding-left:11px;padding-right:11px}.channel{font-size:13px;gap:5px}.channel .mini{width:35px;height:37px}.posterTop{font-size:14px}.heading{font-size:16px}.draw{font-size:24px}.act{font-size:10px}.act.primary{font-size:12px}}
 
-/* V3 high-fidelity pixel RPG design system */
-.world{padding-top:15px;background:
-  radial-gradient(circle at 50% 15%,rgba(255,255,255,.22),transparent 44%),
-  url('./assets/pixel-sky.svg') center center/cover fixed no-repeat,
-  #20b9ff}
-.world:before{content:"";position:absolute;inset:0;pointer-events:none;background:
-  radial-gradient(circle at 8% 28%,#fff5 0 2px,transparent 3px),
-  radial-gradient(circle at 91% 43%,#fff7 0 3px,transparent 4px)}
-.phone{max-width:720px;border:12px solid #050b20;border-radius:82px 82px 35px 35px;box-shadow:
-  0 0 0 4px #45649a,0 0 0 7px #030918,0 24px 0 #0d3b6b55,0 38px 65px #052c6d7a}
-.statusbar{background:#08aaf2;padding-top:24px;padding-bottom:13px}
-.statusbar .notch{height:30px;width:138px;border-radius:0 0 20px 20px}
-.banner{padding:8px 11px 62px;min-height:305px;
- background:linear-gradient(180deg,#0db0fa44,#4ed5ff1a),
- url('./assets/pixel-sky.svg') 50% 42%/cover no-repeat}
-.banner:after{content:"";position:absolute;bottom:-3px;left:0;right:0;height:45px;
- background:linear-gradient(0deg,#68d3ffbb,transparent)}
-.brand{position:relative;margin-top:4px;font-size:22px;z-index:3;text-shadow:3px 3px 0 #09235e}
-.brandMark{width:48px;height:48px;font-size:34px;box-shadow:5px 5px 0 #d88614}
-.brand small{font-size:8px}
-.banner h1{
- position:relative;z-index:3;white-space:nowrap;
- margin:19px auto 13px;
- font-size:clamp(36px,7.2vw,72px);
- letter-spacing:-2.5px;line-height:1.1;
- -webkit-text-stroke:4px #0c255d;
- text-shadow:4px 6px 0 #1d56aa,7px 9px 0 #081b52,0 0 3px #061e57;
-}
-.banner h1 .highlight{color:#ffe944;text-shadow:4px 6px #ba3c7a,7px 9px #081b52}
-.tagline{z-index:3;position:relative;margin-top:0;background:#fff19f;border:4px solid #142c70;
- padding:8px 14px;box-shadow:5px 5px 0 #d88c20;border-radius:9px;
- font-size:clamp(11px,2.3vw,17px);font-weight:1000;transform:rotate(-1deg)}
-.banner .floaty.left{top:100px;left:6%;font-size:45px}
-.banner .floaty.right{top:177px;right:5%;font-size:44px}
-.mascot{position:absolute;z-index:4;bottom:-3px;width:118px;height:155px;filter:drop-shadow(4px 4px 0 #0c3977)}
-.mascot.boy{left:0}.mascot.girl{right:0;transform:scaleX(-1)}
-.decor-coin{position:absolute;z-index:4;right:20%;bottom:10px;width:58px;filter:drop-shadow(3px 4px #1869a9)}
-.main{padding:9px 13px 27px;margin:0 9px 10px;background:#fff;border:5px solid #1b6ec0;
- border-radius:12px;box-shadow:inset 0 0 0 4px #d2f3ff,0 5px 0 #116ac1}
-.block{position:relative;margin-bottom:11px}
-.heading{font-size:21px;font-weight:1000;color:#102b73;margin:0;padding:9px 7px 10px}
-.heading .icon{font-size:25px}
-.heading .meta{font-size:12px;color:#173463}
-.badgeInfo{display:none}
-.picks{background:#fff;padding:3px 8px 12px;gap:13px}
-.channel{min-height:88px;border:4px solid #c8d8ec;border-radius:15px;
- font-size:20px;background:#f8fbff;box-shadow:inset 0 0 0 3px #fff;
- padding:12px 16px;gap:14px;text-shadow:.2px .2px #0a2b6c}
-.channel .mini{width:70px;height:60px;border-radius:13px;font-size:33px}
-.channel[data-platform=xhs] .mini{font-size:17px}
-.channel.selected[data-platform=moments]{background:#e0fff3;border-color:#057e75;box-shadow:0 5px 0 #7ad8b7,inset 0 0 0 3px #fff}
-.channel.selected[data-platform=xhs]{background:#ffe8ee;border-color:#f03a69;box-shadow:0 5px 0 #fbb9cb,inset 0 0 0 3px #fff}
-.channel .tick{width:29px;height:29px;font-size:20px;line-height:24px}
-.posterPanel{padding:12px 10px;border:4px solid #168cf1;box-shadow:inset 0 0 0 5px #daf8ff;
- border-radius:20px}
-.posterTop{width:66%;min-width:230px;border:4px solid #0a2466;padding:7px 2px;
- background:linear-gradient(#fff58b,#ffd337);font-size:20px;box-shadow:4px 5px 0 #cf791e}
-.posters{gap:4px;padding:2px}
-.poster{border:4px solid #078ce5;background:#f9feff;box-shadow:0 4px 0 #80c5f2;border-radius:9px;padding:3px}
-.poster img{aspect-ratio:300/456;object-fit:cover}
-.poster.selected{outline:3px solid #2aabff;outline-offset:1px}
-.posterTip{margin:7px 0 0;font-size:12px}
-.draw{margin:21px auto 23px;
- min-height:99px;border:6px solid #151d3f;border-radius:10px;
- background:linear-gradient(180deg,#fff88f 0%,#ffe438 23%,#ffd114 67%,#ff9e1e 100%);
- box-shadow:0 7px 0 #d76512,inset 0 5px #fff8b5,0 12px 0 #f5c88a;
- font-size:clamp(30px,5.6vw,45px);color:#171624;
- text-shadow:2px 3px #fff2b5;letter-spacing:1px}
-.draw:before,.draw:after{font-size:35px;color:#ff9316}
-.resultPanel{padding:14px 12px 15px;border:4px solid #2a89e0;box-shadow:inset 0 0 0 4px #e7f7ff;border-radius:14px}
-.resultCopy{font-size:17px;line-height:1.75;color:#132d66;min-height:200px;
- max-height:330px;background:#fff;padding:14px 44px 14px 17px;border:3px solid #c7ddf5}
-.resultCopy:after{content:"▢";position:absolute;right:14px;top:10px;color:#1679bd;font-size:29px}
-.actionBar{grid-template-columns:1fr 1.23fr 1fr;gap:9px;margin-top:13px}
-.act{border-width:3px;border-radius:9px;min-height:64px;font-weight:1000;font-size:18px;
- background:linear-gradient(180deg,#fff,#e9f6ff)}
-.act.primary{font-size:20px;border:4px solid #1155ab;
- background:linear-gradient(180deg,#33c5ff,#0077e9);box-shadow:0 4px 0 #024bba}
-.notice{font-size:12px}.foot{font-size:11px}
-.coin-sticker{position:absolute;z-index:3;width:63px;pointer-events:none;filter:drop-shadow(4px 5px 0 #ad6417)}
-.coin-sticker.l{left:calc(50% - 470px);top:245px}
-.coin-sticker.r{right:calc(50% - 470px);top:750px}
-.chest-sticker{position:absolute;z-index:3;width:176px;right:calc(50% - 555px);bottom:37px;pointer-events:none;filter:drop-shadow(7px 8px #a05121)}
-.boy-sticker{position:absolute;z-index:3;width:135px;left:calc(50% - 555px);bottom:45px;pointer-events:none}
-.ground{background:linear-gradient(#69f583 0 15px,#829bd4 15px 38px,#5e70bb 38px);}
-@media(max-width:750px){
- .phone{border:0;border-radius:0;box-shadow:none}
- .world{padding:0 0 22px}
- .statusbar{display:none}
- .coin-sticker,.chest-sticker,.boy-sticker{display:none}
- .banner{min-height:220px;padding:18px 4px 55px}
- .banner h1{font-size:clamp(30px,7.7vw,52px);-webkit-text-stroke:3px #082567;
-   letter-spacing:-1.7px;margin:13px auto 9px}
- .brand{font-size:17px}.brandMark{width:39px;height:39px;font-size:29px}
- .tagline{font-size:clamp(9px,2.85vw,13px);padding:7px 9px}
- .mascot{width:88px;height:116px;bottom:-4px}
- .decor-coin{width:44px;right:21%;bottom:4px}
- .main{margin:0 4px 6px;border-width:3px;padding:7px 8px 18px}
- .heading{font-size:17px;padding:8px 2px}
- .heading .icon{font-size:20px}
- .heading .meta{font-size:10px}
- .channel{min-height:73px;padding:8px 4px;font-size:clamp(12px,3.35vw,17px);gap:6px}
- .channel .mini{width:47px;height:43px;font-size:25px}
- .channel[data-platform=xhs] .mini{font-size:11px}
- .picks{gap:8px;padding:2px 3px 9px}
- .posterPanel{padding:8px 6px;border-width:3px}
- .posterTop{width:82%;font-size:clamp(12px,3.6vw,17px);min-width:0}
- .poster{border-width:2px;padding:2px}
- .draw{min-height:75px;font-size:clamp(23px,6.3vw,32px);border-width:4px;margin:15px auto 16px}
- .resultPanel{padding:9px;border-width:3px}
- .resultCopy{min-height:160px;max-height:300px;font-size:14px;padding:12px 20px}
- .actionBar{gap:5px}
- .act{font-size:clamp(10px,3.1vw,14px);min-height:54px}
- .act.primary{font-size:clamp(12px,3.5vw,16px)}
-}
-@media(max-width:360px){.mascot{width:72px}.decor-coin{display:none}.channel .mini{width:40px;font-size:20px}.heading .meta{max-width:46%;text-align:right}}
 
+/* Chunky pixel frames and outlined arcade lettering */
+:root{--pixel-cut:polygon(0 12px,6px 12px,6px 6px,12px 6px,12px 0,calc(100% - 12px) 0,calc(100% - 12px) 6px,calc(100% - 6px) 6px,calc(100% - 6px) 12px,100% 12px,100% calc(100% - 12px),calc(100% - 6px) calc(100% - 12px),calc(100% - 6px) calc(100% - 6px),calc(100% - 12px) calc(100% - 6px),calc(100% - 12px) 100%,12px 100%,12px calc(100% - 6px),6px calc(100% - 6px),6px calc(100% - 12px),0 calc(100% - 12px))}
+.channel,.draw,.act{isolation:isolate;position:relative;border:0!important;border-radius:0!important;clip-path:var(--pixel-cut);background:#102249!important;box-shadow:none!important;overflow:visible;font-weight:1000;paint-order:stroke fill;-webkit-text-stroke:1px currentColor;text-shadow:0 2px 0 #fff,2px 0 0 #fff,-2px 0 0 #fff,0 -1px 0 #fff,2px 3px 0 #9bbad9;transition:transform .12s,filter .12s}
+.channel::before,.draw::before,.act::before{content:'';display:block;position:absolute;inset:5px;clip-path:var(--pixel-cut);z-index:-1;background:linear-gradient(#fff,#e7f4ff);box-shadow:inset 0 4px #fff,inset 0 -5px #bdd8ee;pointer-events:none}
+.channel:hover:not(:disabled),.act:hover:not(:disabled){filter:brightness(1.04)}
+.channel{min-height:88px;padding:16px 10px;gap:11px;font-size:21px}
+.channel.selected[data-platform=moments]{background:#105c54!important}
+.channel.selected[data-platform=moments]::before{background:linear-gradient(#e4fff2,#b8f2d8);box-shadow:inset 0 4px white,inset 0 -5px #63c5a1}
+.channel.selected[data-platform=xhs]{background:#9d254e!important}
+.channel.selected[data-platform=xhs]::before{background:linear-gradient(#fff1f5,#ffd1e0);box-shadow:inset 0 4px white,inset 0 -5px #ed92b3}
+.channel .mini{border-radius:2px;border:2px solid #ffffffa0;box-shadow:2px 3px #0a324d36;-webkit-text-stroke:0;text-shadow:none}
+.channel .tick{top:6px;right:6px;width:19px;height:19px;line-height:15px;font-size:12px;border:2px solid white;box-shadow:none;text-shadow:none;-webkit-text-stroke:0;border-radius:0}
+.draw{font-size:38px;color:#ffe64d;-webkit-text-stroke:5px #101b36;text-shadow:0 4px #101b36,3px 5px #101b36,3px 8px #da6619;letter-spacing:2px;min-height:93px;padding:22px 10px 25px;filter:drop-shadow(0 5px 0 #0b1a3e)}
+.draw::before{inset:6px;background:linear-gradient(#fff784 0,#ffe439 42%,#ffbb28 88%,#ef6e28 88%);box-shadow:inset 0 5px #fffbc1,inset 0 -5px #f34d43}
+.draw::after{display:none}
+.act{min-height:64px;font-size:16px;padding:18px 4px;letter-spacing:.5px}
+.act.primary{font-size:18px;color:white;-webkit-text-stroke:1px #fff;text-shadow:2px 3px #075caf}
+.act.primary::before{background:linear-gradient(#24caff,#008bef);box-shadow:inset 0 4px #a2eeff,inset 0 -5px #0063d5}
+.heading,.posterTop{font-weight:1000;-webkit-text-stroke:.65px #102453;paint-order:stroke fill;text-shadow:1px 2px #d2e5f5}
+.posterTop{border:0;clip-path:var(--pixel-cut);background:#102249;isolation:isolate;padding:13px 6px;font-size:21px;box-shadow:none}
+.posterTop::before{content:'';position:absolute;inset:4px;z-index:-1;clip-path:var(--pixel-cut);background:linear-gradient(#fff9a4,#ffe447 65%,#ffad30);box-shadow:inset 0 3px white,inset 0 -4px #ec872b}
+button:focus-visible{filter:drop-shadow(0 0 4px #ffc000);outline:none}
+button:disabled{opacity:.6}
+@media(max-width:620px){.channel{font-size:17px;padding:14px 7px;min-height:78px;gap:8px}.channel .mini{width:42px;height:42px}.draw{font-size:29px;-webkit-text-stroke:4px #101b36;min-height:82px;padding:21px 5px 24px;letter-spacing:1px}.act{font-size:13px;min-height:60px;padding:17px 2px;letter-spacing:0}.act.primary{font-size:15px}.posterTop{font-size:17px;padding:12px 4px}}
+@media(max-width:360px){.channel{font-size:14px;gap:4px}.channel .mini{width:34px;height:37px}.draw{font-size:24px}.act{font-size:11px}.act.primary{font-size:13px}.posterTop{font-size:14px}}
+
+
+/* Rich pixel cartoon: title artwork, layered arcade controls, game panels */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.world{background-color:#10a9ee;background-image:linear-gradient(#0088e514,#009df515),url('./assets/carnival-world.png')}
+.banner{padding:0 0 25px;min-height:0}
+.brand{font-size:20px;margin-bottom:0;gap:9px}.brandMark{width:34px;height:34px;font-size:27px;box-shadow:3px 3px #ffc72c}.brand small{font-size:6px;letter-spacing:1.2px}
+.banner h1.illustratedTitle{display:block;transform:none;margin:-14px -8% -24px;width:116%;font-size:0;line-height:0;white-space:normal;-webkit-text-stroke:0;text-shadow:none}
+.illustratedTitle img{width:100%;height:auto;display:block;image-rendering:auto;filter:drop-shadow(0 5px 0 #08377655)}
+.tagline{font-size:12px;line-height:1.5;clip-path:var(--pixel-cut);background:#102449;color:#102449;border:0;padding:12px 23px;isolation:isolate;box-shadow:none;margin-top:8px;font-weight:1000}
+.tagline:before{content:'';position:absolute;z-index:-1;inset:3px;clip-path:var(--pixel-cut);background:linear-gradient(#fffbd6 0 22%,#fff0a0 22% 80%,#fbc53b 80%);box-shadow:inset 0 3px white}
+.banner .floaty{display:none}
+.block,#resultSection{isolation:isolate;border:0;border-radius:0;clip-path:var(--pixel-cut);background:#102449;box-shadow:none;padding:23px 21px 25px}
+.block:before,#resultSection:before{z-index:-1;inset:4px;clip-path:var(--pixel-cut);background:linear-gradient(135deg,#fff 30%,#eaf7ff);border:0;box-shadow:inset 0 4px #fff,inset 0 8px #aee8ff,inset 0 -5px #5da5d3,inset 0 -9px #b8e8ff,inset 4px 0 #8bd2f5,inset -4px 0 #8bd2f5}
+.heading{font-size:22px;letter-spacing:.8px;text-shadow:2px 2px #bdd9ee;padding-bottom:18px}
+.heading .icon{background:#e0f5ff;border:2px solid #173e72;box-shadow:2px 2px #4fa6d3;width:32px;height:29px;font-size:20px}
+.badgeInfo{clip-path:polygon(4px 0,calc(100% - 4px) 0,calc(100% - 4px) 4px,100% 4px,100% calc(100% - 4px),calc(100% - 4px) calc(100% - 4px),calc(100% - 4px) 100%,4px 100%,4px calc(100% - 4px),0 calc(100% - 4px),0 4px,4px 4px);background:#d7edff;color:#366c9c;border-radius:0;padding:6px 9px}
+.channel{min-height:96px;padding:17px 8px 23px;background:#152748!important;font-size:21px;letter-spacing:.3px;text-shadow:1px 1px white,2px 3px #7facc0}
+.channel::before{inset:4px 4px 9px;background:linear-gradient(#fff 0 10%,#edfaff 10% 54%,#d3eaff 54% 84%,#91b9db 84%);box-shadow:inset 0 3px white,inset 3px 0 white,inset -3px 0 #b5d3ec,inset 0 -4px #709cbf}
+.channel.selected[data-platform=moments]::before{background:linear-gradient(#eefff8 0 10%,#c8fbe3 10% 54%,#a4ebcb 54% 84%,#42b28e 84%);box-shadow:inset 0 3px #fff,inset 3px 0 #edfff5,inset -3px 0 #76cdae,inset 0 -4px #208a6e}
+.channel.selected[data-platform=xhs]::before{background:linear-gradient(#fff6f9 0 10%,#ffe0ec 10% 54%,#ffc3da 54% 84%,#e27ba0 84%);box-shadow:inset 0 3px white,inset 3px 0 #fff2f7,inset -3px 0 #ef96b5,inset 0 -4px #b9517e}
+.channel::after{content:'';position:absolute;width:29px;height:4px;top:11px;left:21px;background:#fff;box-shadow:34px 0 #ffffffaa;pointer-events:none;opacity:.85}
+.channel .mini{border:2px solid #fff;box-shadow:0 3px #0a6b5960,2px 0 #ffffff90,inset 0 3px #ffffff50}
+.channel .tick{right:9px;top:9px;z-index:2;width:22px;height:22px;line-height:17px;border:2px solid white;box-shadow:2px 2px #1b725a}
+.drawMount{position:relative;margin:23px 4px 27px;filter:drop-shadow(0 5px #08254c);padding-bottom:4px}
+.draw{width:100%;margin:0;min-height:112px;padding:24px 10px 34px;font-size:43px;letter-spacing:2px;-webkit-text-stroke:6px #132443;color:#fff29a;text-shadow:0 3px #132443,3px 5px #132443,3px 8px #c36b0a;filter:none}
+.draw::before{inset:5px 5px 11px;background:linear-gradient(#fffac4 0 7%,#fff26b 7% 17%,#ffe43c 17% 55%,#ffcf26 55% 79%,#ffad24 79% 89%,#f37f25 89%);box-shadow:inset 4px 0 #fff297,inset -4px 0 #f9951d,inset 0 -5px #dc4829}
+.draw::after{content:'';display:block;position:absolute;inset:11px 13px 23px;top:11px;z-index:-1;width:auto;height:auto;border-top:4px solid #fffddd;border-left:3px solid #fffaa0;border-right:3px solid #e99d11;border-bottom:3px solid #e69c15;clip-path:var(--pixel-cut);background:transparent;pointer-events:none}
+.drawSpark{position:absolute;z-index:2;top:30%;font-size:29px;color:#fff14c;-webkit-text-stroke:2px #132443;paint-order:stroke fill;text-shadow:2px 3px #f88e22;pointer-events:none}.drawSpark.left{left:-13px;transform:rotate(-12deg)}.drawSpark.right{right:-13px;transform:rotate(12deg)}
+.draw:hover:not(:disabled){filter:brightness(1.08);transform:translateY(-2px)}
+.draw:active:not(:disabled){transform:translateY(4px)}
+.actionBar{gap:12px;margin-top:17px;padding-bottom:4px}
+.act{font-size:15px;min-height:72px;padding:18px 3px 26px;background:#13294c!important;text-shadow:1px 1px white,1px 3px #93bbd6}
+.act::before{inset:4px 4px 9px;background:linear-gradient(#fff 0 13%,#eefaff 13% 54%,#ceeaff 54% 80%,#a2c7e6 80%);box-shadow:inset 3px 0 white,inset -3px 0 #c3e1f5,inset 0 -4px #689ec6}
+.act::after{content:'';position:absolute;left:18px;top:10px;width:22px;height:3px;background:#fff;box-shadow:26px 0 #ffffff90;pointer-events:none}
+.act.primary{font-size:18px;text-shadow:2px 3px #075baf;color:white}
+.act.primary::before{background:linear-gradient(#b5f5ff 0 9%,#38d5ff 9% 24%,#09bafa 24% 55%,#0099ef 55% 81%,#0875d3 81%);box-shadow:inset 3px 0 #8ceeff,inset -3px 0 #187fc6,inset 0 -4px #064ca8}
+.resultCopy{background:linear-gradient(#effaff,#e3f3ff);border:3px solid #9ac8e9;border-radius:0;box-shadow:inset 3px 3px #c6e4f7,inset -3px -3px white;font-size:16px}
+.notice,.foot{border-radius:0}.notice{border:2px solid #73b7da;box-shadow:inset 0 3px #fff6,0 3px #0b619c44}
+@media(max-width:620px){.world{padding-top:18px}.brand{font-size:17px}.brandMark{width:30px;height:30px;font-size:24px}.brand small{font-size:5px}.banner h1.illustratedTitle{margin:-8px -4% -16px;width:108%}.tagline{font-size:10px;padding:10px 13px;max-width:100%;margin-top:6px}.banner{padding-bottom:20px}.block,#resultSection{padding:20px 14px 22px}.heading{font-size:19px;letter-spacing:.3px}.heading .icon{width:27px;height:26px;font-size:18px}.channel{min-height:85px;font-size:16px;padding:15px 6px 22px;gap:7px}.channel .mini{width:40px;height:41px}.channel .tick{width:18px;height:18px;line-height:14px;right:8px;top:8px;font-size:10px}.channel::after{width:20px;left:18px;top:10px;height:3px;box-shadow:24px 0 #ffffffaa}.drawMount{margin:19px 2px 23px}.draw{min-height:98px;font-size:31px;padding:23px 5px 32px;letter-spacing:1px;-webkit-text-stroke:4px #132443}.drawSpark{font-size:22px}.act{min-height:66px;font-size:12px;padding:17px 1px 24px}.act.primary{font-size:14px}.actionBar{gap:8px}.resultCopy{font-size:14px}}
+@media(max-width:360px){.channel{font-size:13px;gap:4px}.channel .mini{width:33px;height:35px}.draw{font-size:26px}.act{font-size:10px}.act.primary{font-size:12px}.tagline{font-size:9px}}
+
+
+/* Smaller illustrated title, same artwork and styling. */
+.banner h1.illustratedTitle{width:86%;margin:-4px auto -16px}
+@media(max-width:620px){.banner h1.illustratedTitle{width:88%;margin:0 auto -10px}}
+
+/* Display supplied logo, preserving original pixels and transparent padding. */
+.brand.uploadedLogo{display:block;position:relative;width:230px;aspect-ratio:1082/307;margin:0 auto 6px;overflow:hidden;filter:none}
+.brand.uploadedLogo img{position:absolute;display:block;width:189.279113%;height:auto;max-width:none;left:-44.639556%;top:-99.022801%}
+@media(max-width:620px){.brand.uploadedLogo{width:200px;margin-bottom:5px}}
 </style>
 </head>
 <body><div class="world">
 <div class="cloud"></div><div class="cloud two"></div><div class="tree left"></div><div class="tree right"></div><div class="spark a">✦</div><div class="spark b">✦</div><div class="spark c">✦</div><div class="ground"></div>
-<img class="coin-sticker l" src="./assets/coin.svg" alt="" aria-hidden="true"/><img class="coin-sticker r" src="./assets/coin.svg" alt="" aria-hidden="true"/><img class="chest-sticker" src="./assets/chest.svg" alt="" aria-hidden="true"/><img class="boy-sticker" src="./assets/mascot-boy.svg" alt="" aria-hidden="true"/>
 <div class="phone">
 <div class="statusbar"><span>9:41</span><span class="notch"></span><span>▮▮▮ ◕ ▰</span></div>
 <header class="banner">
-<img class="mascot boy" src="./assets/mascot-boy.svg" alt="" aria-hidden="true"/>
-<img class="mascot girl" src="./assets/mascot-girl.svg" alt="" aria-hidden="true"/>
-<img class="decor-coin" src="./assets/coin.svg" alt="" aria-hidden="true"/>
 <span class="floaty left" aria-hidden="true">✦</span><span class="floaty right" aria-hidden="true">🪙</span>
-<div class="brand"><span class="brandMark" aria-hidden="true">N</span><span>新手村次元<small>NEWBIE VILLAGE DIMENSION</small></span></div>
-<h1>活动宣传<span class="highlight">文案</span>抽取</h1>
-<div class="tagline">一键抽取活动文案，轻松发布到朋友圈或小红书！</div>
+<div class="brand uploadedLogo"><img src="./assets/newbie-village-logo.png" alt="新手村次元 NEWBIE VILLAGE DIMENSION" width="2048" height="914"></div>
+<h1 class="illustratedTitle"><img src="./assets/pixel-title.png" alt="活动宣传 文案抽取" width="1200" height="600"><span class="sr-only">活动宣传文案抽取</span></h1>
+<div class="tagline">一键抽取活动文案，轻松分享到朋友圈或小红书！</div>
 </header>
 <main class="main">
 <section class="block" id="platformSection"><div class="heading"><span><span class="icon">🎮</span> 选择发布平台</span><span class="badgeInfo">① 选择平台</span></div>
 <div class="picks" role="group" aria-label="选择发布平台">
-<button type="button" class="channel selected" data-platform="moments" aria-pressed="true"><span class="mini" aria-hidden="true">☏</span><span>微信朋友圈</span><span class="tick">✓</span></button>
+<button type="button" class="channel selected" data-platform="moments" aria-pressed="true"><span class="mini" aria-hidden="true"><svg class="wechatIcon" viewBox="0 0 48 42"><path fill="white" d="M20 3C10 3 3 9 3 17c0 4 2 8 6 10l-2 6 8-4 5 1c10 0 17-6 17-13S30 3 20 3Z"/><path fill="#e9fff3" stroke="#08b67b" stroke-width="1.5" d="M32 16c8 0 14 5 14 11 0 4-2 7-5 9l1 4-6-3-4 1c-8 0-14-5-14-11s6-11 14-11Z"/><g fill="#07ac70"><circle cx="14" cy="13" r="2"/><circle cx="25" cy="13" r="2"/><circle cx="27" cy="25" r="1.5"/><circle cx="36" cy="25" r="1.5"/></g></svg></span><span>微信朋友圈</span><span class="tick">✓</span></button>
 <button type="button" class="channel" data-platform="xhs" aria-pressed="false"><span class="mini" aria-hidden="true">小红书</span><span>小红书</span><span class="tick">✓</span></button>
 </div></section>
-<section class="block"><div class="heading"><span><span class="icon">🖼️</span> 活动海报</span><span class="meta">以下为同一活动的海报参考</span></div>
-<div class="posterPanel"><div class="posterTop">✦ 新手村奇遇嘉年华 ✦</div><div class="posters">
-<button class="poster selected" data-poster="0" type="button" aria-pressed="true" aria-label="选择奇遇嘉年华海报"><img src="./assets/poster-adventure.svg" alt="新手村奇遇嘉年华：玩游戏、集印章、赢惊喜"><span class="posterCheck">✓</span></button>
-<button class="poster" data-poster="1" type="button" aria-pressed="false" aria-label="选择伙伴集结海报"><img src="./assets/poster-friends.svg" alt="新手村伙伴集结：音乐、舞步、社团冒险"><span class="posterCheck">✓</span></button>
-</div><p class="posterTip">冒险线索正在解锁 · 点击选择你喜欢的海报</p></div></section>
-<button id="draw" class="draw" type="button" disabled>🎲 正在加载文案…</button>
+
+<div class="drawMount"><span class="drawSpark left" aria-hidden="true">✦</span><button id="draw" class="draw" type="button" disabled>🎲 正在加载文案…</button><span class="drawSpark right" aria-hidden="true">✦</span></div>
 <section id="resultSection"><div class="heading"><span><span class="icon">📄</span> 抽取结果 ✨</span><span class="meta" id="serial">还未抽取</span></div>
 <div class="resultPanel"><div id="result" class="resultCopy" aria-live="polite">准备好了吗？点击上方黄色按钮，领取属于你的活动宣传文案！</div>
 <div class="actionBar"><button id="again" type="button" class="act" disabled>↻ 重新抽取</button><button id="copy" type="button" class="act primary" disabled>▣ 复制文案</button><button id="back" type="button" class="act">↶ 返回选择</button></div></div></section>
