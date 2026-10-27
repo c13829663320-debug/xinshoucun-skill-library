@@ -205,7 +205,7 @@ button:disabled{opacity:.6}
 @media(max-width:620px){.brand.uploadedLogo{width:200px;margin-bottom:5px}}
 </style>
 <link rel="preload" as="image" href="./assets/pixel-title.webp" fetchpriority="high">
-<link rel="preload" as="fetch" href="./texts.json?v=5e0075aab3d2" crossorigin>
+<link rel="preload" as="fetch" href="./texts.json?v=4067f2ac1166" crossorigin>
 </head>
 <body><div class="world">
 <div class="cloud"></div><div class="cloud two"></div><div class="tree left"></div><div class="tree right"></div><div class="spark a">✦</div><div class="spark b">✦</div><div class="spark c">✦</div><div class="ground"></div>
@@ -307,7 +307,7 @@ copy.addEventListener("click",async()=>{
     notice.textContent=ok?"✅ 已复制文案！":"复制失败，请长按文案选中并复制。";
   }
 });
-fetch("./texts.json?v=5e0075aab3d2").then(r=>{if(!r.ok)throw new Error("未能加载文案库");return r.json()}).then(data=>{
+fetch("./texts.json?v=4067f2ac1166").then(r=>{if(!r.ok)throw new Error("未能加载文案库");return r.json()}).then(data=>{
   if(!Array.isArray(data)||data.length!==1000)throw new Error("文案库必须包含1000组");
   for(const key of ["xhs","moments"]){const all=data.map(x=>x&&x[key]);if(all.some(t=>typeof t!=="string"||!t.trim())||new Set(all).size!==1000)throw new Error(key+"文案缺失或重复");}
   bank=data;draw.disabled=false;draw.textContent="🎲 立即抽取文案";notice.textContent="文案库已就绪！小红书与朋友圈各1000条。";
